@@ -12,8 +12,10 @@ while True:
 for i, b in enumerate(boletim):
     print(f'{i} {boletim[i][0]} {(boletim[i][1] + boletim[i][2])/2}')
 nota = 0
-while nota != 999:
+while True:
     nota = int(input('Mostrar notas de qual aluno? (999 Interrompe) '))
-    print(f'As notas de {boletim[nota][0]} são {boletim[nota][1:3]}')
-
-print(boletim)
+    if nota == 999:
+        break
+        print('Volte sempre!')
+    else:
+        print(f'As notas de {boletim[nota][0]} são {boletim[nota][1:3]}')
